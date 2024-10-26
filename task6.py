@@ -22,7 +22,7 @@ def f(chislitel,znamenatel):
             if znamenatel % chislitel_delitel == 0:
                 ans1 = chislitel//chislitel_delitel
                 ans2 = znamenatel//chislitel_delitel
-    print(ans1,ans2)
+        return ans1,ans2
 
     if znamenatel > chislitel:
         for j in range(1,znamenatel):
@@ -31,8 +31,9 @@ def f(chislitel,znamenatel):
             if chislitel % znamenatel_delitel == 0:
                 ans3 = chislitel // znamenatel_delitel
                 ans4 = znamenatel // znamenatel_delitel
-    print(ans3,ans4)
+        return ans3,ans4
     if znamenatel == chislitel:
-        print(chislitel,znamenatel)
+        return chislitel,znamenatel
+
 a,b=map(int,input().split())
 print(f(a,b))
