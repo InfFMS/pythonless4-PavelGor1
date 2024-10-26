@@ -3,4 +3,14 @@
 # или слово NO в противном случае.
 # Операцией возведения в степень пользоваться нельзя!
 # Задача на рекурсию!
-
+def f(n):
+    if n == 1:
+        return True
+    if n < 1 or n % 2 != 0:
+        return False
+    return f(n // 2)
+N = int(input())
+if f(N):
+    print("YES")
+else:
+    print("NO")

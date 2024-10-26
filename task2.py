@@ -14,3 +14,23 @@
 #
 # семь
 # восемьдесят пять
+def number_to_words(num):
+    units = ["", "один", "два", "три", "четыре", "пять","шесть", "семь", "восемь", "девять" ]
+    teens = ["десять", "одиннадцать", "двенадцать", "тринадцать","четырнадцать", "пятнадцать", "шестнадцать", "семнадцать", "восемнадцать", "девятнадцать"]
+    tens = [ "", "двадцать", "тридцать", "сорок","пятьдесят", "шестьдесят", "семьдесят","восемьдесят", "девяносто"]
+    if num < 10:
+        return units[num]
+    elif 10 <= num < 20:
+        return teens[num - 10]
+    else:
+        ten = num // 10
+        unit = num % 10
+        if unit == 0:
+            return tens[ten]
+        else:
+            return tens[ten] + " " + units[unit]
+
+print(number_to_words(7))
+print(number_to_words(15))
+print(number_to_words(42))
+print(number_to_words(85))
